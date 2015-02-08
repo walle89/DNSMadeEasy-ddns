@@ -17,7 +17,7 @@ Simple DNS Made Easy Dynamic DNS client written in PHP.
 
 Clone or download zip
 ```bash
-git clone git@github.com:walle89/DNSMadeEasy-ddns.git
+git clone git@github.com:walle89/DNSMadeEasy-ddns.git ddns
 ```
 
 Copy config.sample.php to config.php and change the settings.
