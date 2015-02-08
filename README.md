@@ -5,7 +5,7 @@ Simple DNS Made Easy Dynamic DNS client written in PHP.
 
 * With the cache enabled, it's only updates the DNS records when the IP have changed.
 * Cache expire makes sure the DNS recod is in sync.
-* Update one or serveral DNS records in one IP change update.
+* Update one or several DNS records in one IP change update.
 * Can be triggered both via CLI or in a http request
 
 ## System requirements
