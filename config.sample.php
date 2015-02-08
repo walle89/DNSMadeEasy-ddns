@@ -2,7 +2,7 @@
 $config = array(
 
 	// General settings
-	'username'  => 'usernamde-or-email',
+	'username'  => 'username-or-email',
 	'password'  => 'ddns-password',
 	'recordIDs' => array(
 		'example.com'     => 1007, // Record ID / Dynamic DNS ID
@@ -18,4 +18,4 @@ $config = array(
 );
 
 define('EXTERNAL_IP_SERVICE', 'http://www.dnsmadeeasy.com/myip.jsp');
-define('UPDATE_IP_URL', '//cp.dnsmadeeasy.com/servlet/updateip');
+define('UPDATE_IP_URL', 'https://cp.dnsmadeeasy.com/servlet/updateip');
