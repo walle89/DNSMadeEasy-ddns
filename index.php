@@ -1,5 +1,5 @@
 <?php
-define('CONFIG_FILE_PATH', 'config.php');
+define('CONFIG_FILE_PATH', __DIR__.'/config.php');
 define('MIN_PHP_VERSION','5.2.0');
 
 if( version_compare(PHP_VERSION, MIN_PHP_VERSION, '<'))
