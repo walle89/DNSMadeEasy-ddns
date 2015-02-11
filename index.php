@@ -1,6 +1,7 @@
 <?php
 define('CONFIG_FILE_PATH', __DIR__.'/config.php');
 define('MIN_PHP_VERSION','5.2.0');
+define('NEW_ROW', (php_sapi_name() == 'cli') ? PHP_EOL : '<br>');
 
 if( version_compare(PHP_VERSION, MIN_PHP_VERSION, '<'))
 	exit('Error: You are running this script with unsupported PHP version! The minimum PHP version requirement is '.MIN_PHP_VERSION.', you have '.phpversion());
@@ -31,10 +32,6 @@ function getContentURL($url)
 	return $content;
 }
 
-$newRow = PHP_EOL;
-if( php_sapi_name() != 'cli')
-	$newRow = '<br>';
-
 // External IP
 $content    = file_get_contents(EXTERNAL_IP_SERVICE);
 $ip         = filter_var($content, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE);
@@ -54,7 +51,7 @@ if($config['cache']['enabled'])
 	if(!file_exists($cacheDir))
 	{
 		if(!mkdir($cacheDir, 0755, true))
-			echo "Warning: Can not create cache folder. Check file permissions or manually create the cache folder.".$newRow;
+			echo "Warning: Can not create cache folder. Check file permissions or manually create the cache folder.".NEW_ROW;
 	}
 
 	if(is_writable($cacheDir))
@@ -82,7 +79,7 @@ if($config['cache']['enabled'])
 		}
 	}
 	else
-		echo "Warning: Can not write to cache. Check the permissions.".$newRow;
+		echo "Warning: Can not write to cache. Check the permissions.".NEW_ROW;
 }
 
 // Update!
@@ -104,8 +101,8 @@ elseif( !in_array($response, array( 'success', 'error-record-ip-same')) )
 
 // Update chache
 if ( $config['cache']['enabled'] AND file_put_contents($config['cache']['filepath'], $cacheContent) === false)
-	echo "Warning: Can not write to cache file. Check file premissions.".$newRow;
+	echo "Warning: Can not write to cache file. Check file premissions.".NEW_ROW;
 
 // New IP-address message!
 if( $response == 'success')
-	echo 'Update succesful! New IP is: '.$ip.$newRow;
+	echo 'Update succesful! New IP is: '.$ip.NEW_ROW;
