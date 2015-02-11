@@ -107,4 +107,4 @@ if ( $config['cache']['enabled'] AND file_put_contents($config['cache']['filepat
 
 // New IP-address message!
 if( $response == 'success')
-	echo 'Update succesful! New IP is: '.$ip.NEW_ROW;
+	echo 'Update successful! New IP is: '.$ip.NEW_ROW;
