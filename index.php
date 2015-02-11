@@ -1,5 +1,7 @@
 <?php
-define('CONFIG_FILE_PATH', dirname(__FILE__).'/config.php');
+if ( !defined('CONFIG_FILE_PATH') ) // For testing ad debugging
+	define('CONFIG_FILE_PATH', dirname(__FILE__).'/config.php');
+
 define('MIN_PHP_VERSION','5.2.0');
 define('NEW_ROW', (php_sapi_name() == 'cli') ? PHP_EOL : '<br>');
 
