@@ -103,7 +103,7 @@ elseif( !in_array($response, array( 'success', 'error-record-ip-same')) )
 
 // Update chache
 if ( $config['cache']['enabled'] AND file_put_contents($config['cache']['filepath'], $cacheContent) === false)
-	echo "Warning: Can not write to cache file. Check file premissions.".NEW_ROW;
+	echo "Warning: Can not write to cache file. Check file permissions.".NEW_ROW;
 
 // New IP-address message!
 if( $response == 'success')
