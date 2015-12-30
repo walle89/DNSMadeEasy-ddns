@@ -17,5 +17,5 @@ $config = array(
 	),
 );
 
-define('EXTERNAL_IP_SERVICE', 'http://www.dnsmadeeasy.com/myip.jsp');
+define('EXTERNAL_IP_SERVICE', 'http://myip.dnsmadeeasy.com');
 define('UPDATE_IP_URL', 'https://cp.dnsmadeeasy.com/servlet/updateip');
