@@ -1,3 +1,8 @@
+# 0.0.5 / 2017-11-11
+ * Curl is now the main method for getting and updating IP
+ * Check for if cache is readable
+ * Bugfix usages of Curl to get external IP
+
 # 0.0.4 / 2015-12-30
  * Updated external IP service URL
 
