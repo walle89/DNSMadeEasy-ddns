@@ -35,7 +35,7 @@ function getContentURL($url)
 }
 
 // External IP
-$content    = file_get_contents(EXTERNAL_IP_SERVICE);
+$content    = getContentURL(EXTERNAL_IP_SERVICE);
 $ip         = filter_var($content, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE);
 
 if(empty($ip))
