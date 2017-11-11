@@ -19,10 +19,7 @@ require_once ''.CONFIG_FILE_PATH.'';
 function getContentURL($url)
 {
 	$content = null;
-	if ( ini_get('allow_url_fopen') )
-		$content = file_get_contents($url);
-
-	elseif ( function_exists('curl_version') )
+	if ( function_exists('curl_version') )
 	{
 		$curl = curl_init();
 		curl_setopt($curl, CURLOPT_URL, $url);
@@ -30,8 +27,10 @@ function getContentURL($url)
 		$content = curl_exec($curl);
 		curl_close($curl);
 	}
+	elseif (ini_get('allow_url_fopen'))
+        $content = file_get_contents($url);
 
-	return $content;
+	return trim($content);
 }
 
 // External IP
