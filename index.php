@@ -101,7 +101,7 @@ if(empty($response))
 elseif( !in_array($response, array( 'success', 'error-record-ip-same')) )
 	exit('Error: From DNS Made Easy Dynamic DNS service: "'.$response.'".');
 
-// Update chache
+// Update cache
 if ( $config['cache']['enabled'] AND file_put_contents($config['cache']['filepath'], $cacheContent) === false)
 	echo "Warning: Can not write to cache file. Check file permissions.".NEW_ROW;
 
