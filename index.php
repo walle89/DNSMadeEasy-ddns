@@ -61,7 +61,7 @@ if($config['cache']['enabled'])
 		$cacheContent = $ip.';'.$recordIDs;
 
 		// Cache file exits
-		if(file_exists($config['cache']['filepath']))
+		if(is_readable($config['cache']['filepath']))
 		{
 			$forceUpdate = false;
 
