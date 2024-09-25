@@ -1,3 +1,9 @@
+# ⚠️ Project Abandoned ⚠️
+
+This project is no longer maintained or updated. Due to other commitments and priorities, I have decided to stop supporting this project. Please feel free to fork the repository if you’d like to continue development or use it as a reference.
+
+--------------------
+
 # DNS Made Easy DDNS
 Simple DNS Made Easy Dynamic DNS client written in PHP.
 
